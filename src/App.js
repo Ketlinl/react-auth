@@ -1,10 +1,8 @@
-
+import Login from "./Containers/login";
 
 function App() {
   return (
-    <div className="App">
-      OI
-    </div>
+    <Login />
   );
 }
 
