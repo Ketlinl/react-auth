@@ -6,7 +6,7 @@ export const InputField = field => {
   return (
     <>
       <input {...field.input} className="form-control" placeholder={field.placeholder} id={field.id} />
-      {error && touched && (<div className="invalid-feedback d-block">{error}</div>)}
+      {error && touched && (<div className="text-danger">{error}</div>)}
     </>
   );
 };
