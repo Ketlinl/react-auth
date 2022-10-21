@@ -1,9 +1,6 @@
-export function loginAPI(data) {
-  const url = "/auth/";
-  return axios.post(url, data);
-}
+import axios from "config/axios";
 
-export function getLoggedUserAPI() {
-  const url = "/representative/current-user";
-  return axios.get(url);
+export function loginAPI(data) {
+  const url = "/auth";
+  return axios.post(url, data);
 }
