@@ -1,18 +1,14 @@
-import Login from "./Containers/login";
-import styled from 'styled-components';
+import { Switch, Route } from "react-router";
+import { Login } from "screens/Accounts";
+import { SCREENS } from "shared/constants";
 
-
-function App() {
+const App = () => {
   return (
-    <Container className="container">
-      <Login />
-    </Container>
+    <Switch>
+      <Route exact path={SCREENS.LOGIN} component={Login} />
+      <Route path='*' component={Login} />
+    </Switch>
   );
-}
-
-const Container = styled.div`
-  width: 100%;
-  height: 100vh;
-`;
+};
 
 export default App;
