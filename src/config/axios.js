@@ -53,7 +53,11 @@ axios.interceptors.response.use(function(response) {
     try {
       msg = error.response.data.non_field_errors[0];
     } catch(e) {
-      msg = error.response.data.detail;
+      if (error.response.data.detail) {
+        msg = error.response.data.detail;
+      } else {
+        msg = error.response.data.message;
+      }
     }
 
     console.error(msg);
@@ -66,5 +70,4 @@ axios.interceptors.response.use(function(response) {
   return Promise.reject(error);
 });
 
-export { baseURL };
 export default axios;

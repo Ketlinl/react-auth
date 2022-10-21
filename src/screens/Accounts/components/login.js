@@ -13,7 +13,7 @@ export const LoginComponent = props => {
       <Form
         onSubmit={data => submit(data)}
         validate={validateLogin}
-        initialValues={{email: "ket@gmail.com"}}
+        initialValues={{email: "fulano@gmail.com"}}
         render={({ handleSubmit, submitting, invalid }) => (
           <form onSubmit={handleSubmit}>
             <div>

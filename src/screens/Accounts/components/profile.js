@@ -5,7 +5,7 @@ export const ProfileComponent = props => {
 
   return (
   <Container className="container">
-    <p>Ola {user.email}</p>
+    <p>Ola {user.name}</p>
   </Container>
   )
 }
