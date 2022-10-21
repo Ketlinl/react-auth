@@ -3,10 +3,18 @@ import styled from 'styled-components';
 export const ProfileComponent = props => {
   const { user } = props;
 
+  if (!user) {
+    return (
+      <Container className="container">
+        <p>Ola</p>
+      </Container>
+    )
+  }
+
   return (
-  <Container className="container">
-    <p>Ola {user.name}</p>
-  </Container>
+    <Container className="container">
+      <p>Ola {user.name}</p>
+    </Container>
   )
 }
 

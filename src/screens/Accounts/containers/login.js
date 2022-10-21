@@ -21,7 +21,7 @@ class LoginContainer extends Component {
       const response = await loginAPI(data);
       dispatch(loginAction({ token: response.data.token }));
       dispatch(fetchUserAction({ user: response.data.user }));
-      successAlert(`Seja bem-vindo(a) ${response.data.user.email}`);
+      successAlert(`Seja bem-vindo(a) ${response.data.user.name}`);
       this.__redirectTo(SCREENS.PROFILE, { user: response.data.user });
     } catch(error) {
       errorAlert(error);
